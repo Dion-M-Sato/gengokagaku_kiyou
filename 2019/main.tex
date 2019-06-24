@@ -1,0 +1,53 @@
+\documentclass[uplatex,a4j,11pt]{jsarticle}
+\renewcommand{\abstractname}{要旨}
+\renewcommand\baselinestretch{0.8}
+\usepackage[vdivide={3cm,,3cm}]{geometry}
+\usepackage{fixltx2e}
+\usepackage{setspace}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{indent}
+\usepackage{fancybox}
+\usepackage{type1ec} %T2Aなどを使う．
+\usepackage{textcomp} % T1のシンボルを使う
+\usepackage[T2A,T1]{fontenc}%フォントでT2AとT1を使う
+\usepackage[utf8]{inputenc}% ファイルがUTF8であること
+\usepackage{zi4}%等幅フォントをInconsolataで
+\usepackage[multi,deluxe,uplatex,jis2004]{otf}%繁簡ハングル多ウェイトOpenTypeなし
+\usepackage[prefernoncjk]{pxcjkcat} % なるべく「半角」扱いで．
+\cjkcategory{sym18}{cjk} % sym18 (U+25A0 - U+25FF Geometric Shapes) を和文文字あつかい
+\usepackage[caption=main,english,french,german,russian,japanese]{pxbabel} %基底言語は日本語
+\usepackage{plext} %傍点をふる
+\usepackage{pxrubrica} %ルビをつける
+\usepackage{comment} %コメント環境の用意
+\usepackage{siunitx} %% SI単位系の出力
+\usepackage{ascmac} %ボックス
+\setcounter{tocdepth}{3}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\usepackage[dvipdfmx]{graphicx}
+\newcommand*{\tabref}[1]{表~\ref{tab:#1}} %表のカウント
+\newcommand*{\figref}[1]{図~\ref{fig:#1}} %図のカウント
+\newenvironment{mytab}[3][htbp] %表を中央揃え
+ {\begin{table}[#1]\begin{center}\caption{#2}\label{#3}}
+ {\end{center}\end{table}}
+\newcommand{\myfig}[4][width=.8\linewidth]{ %図を中央揃え
+\begin{figure}[htbp]
+   \centering\includegraphics[#1]{#2}
+   \caption{#3}\label{fig:#4}
+\end{figure}}
+\title{田中小実昌「ポロポロ」における\\鋳型としての「人魂」について\footnote{発表日は2017/7/17。}}
+\author{佐藤正尚\footnote{言語情報科学専攻博士後期課程1年(31-187007) masasato@phiz.c.u-tokyo.ac.jp}}
+\date{2018/7/31}
+
+% prevent hyphenation
+\hyphenpenalty=10000\relax
+\exhyphenpenalty=10000\relax
+\sloppy
+
+\begin{document}
+\maketitle
+%\thispagestyle{empty}
+\tableofcontents
+\input{resume}
+\end{document}
+
